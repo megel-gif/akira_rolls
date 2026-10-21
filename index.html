@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--
+DOCTYPE HTML - DEFINE QUAL VERSÃO DO DOCUMENTO
+QUE ESTAMOS UTILIZANDO, QUE NO CASO É HTML5
+-->
+<html lang="pt-br"><!-- Início do bloco html-->
+
+<head><!-- Início do cabeçalho do site-->
+    <title>Akira Rolls - Temakeria</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Akira Rolls: temakis e rolls enrolados na hora." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- defer: o JavaScript só roda depois que a página carregou -->
+    <script src="js/efeitos.js" defer></script>
+</head><!-- Fim do cabeçalho do site-->
+
+<body><!-- Início do corpo do sistema-->
+
+    <header class="topo">
+        <div class="topo-interno">
+            <a href="index.html"><img src="img/icone-akira.png" alt="Akira Rolls - página inicial" /></a>
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li class="esconde-mobile"><a href="#restaurante">Restaurante</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="#visite">Visite</a></li>
+                    <li><a class="botao" href="cardapio.html">Pedir</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Destaque principal (h1 só aparece uma vez por página) -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-texto">
+                    <img class="hero-logo" src="img/logo-akira.png" alt="Akira Rolls" />
+                    <h1>enrolado na hora, comido sem pressa.</h1>
+                    <p>
+                        Alga crocante, arroz no ponto e recheio generoso.<br />
+                        Escolha no cardápio e peça pelo WhatsApp.
+                    </p>
+                    <p class="acoes">
+                        <a class="botao" href="cardapio.html">Ver cardápio</a>
+                        <a class="botao botao-claro" href="#visite">Como chegar</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <hr />
+
+        <!-- 2. Restaurante -->
+        <section class="secao" id="restaurante">
+            <div class="container grade-2">
+                <div>
+                    <h2>temaki é ritual.</h2>
+                    <p>Na Akira Rolls, cada cone é enrolado depois do seu pedido: alga crocante, arroz no ponto e recheio generoso.</p>
+                    <p class="suave">Sem pressa na mesa e sem fila na cozinha. Peça pelo WhatsApp e retire no balcão ou receba em casa.</p>
+                    <p class="acoes"><a class="botao" href="cardapio.html">Conhecer o cardápio</a></p>
+                </div>
+                <figure class="foto-corte">
+                    <img src="img/temaki.jpg" alt="Temaki de salmão com cebolinha sobre prato preto" />
+                </figure>
+            </div>
+        </section>
+
+        <!--
+        3. FAIXA COM PARALAXE + ANEL GIRANDO
+        - A imagem de fundo (data-parallax) se move mais devagar que a página (js/efeitos.js).
+        - O texto em círculo é um SVG (textPath) que gira sozinho e acelera quando você rola.
+        -->
+        <section class="faixa" aria-label="Sequências e pratos à la carte">
+            <img class="fundo" data-parallax src="img/capa.jpg" alt="" />
+            <a class="anel" href="cardapio.html" aria-label="Ver sequências e pratos à la carte no cardápio">
+                <svg viewBox="0 0 300 300" aria-hidden="true">
+                    <defs>
+                        <path id="circulo" d="M150,150 m-122,0 a122,122 0 1,1 244,0 a122,122 0 1,1 -244,0" />
+                    </defs>
+                    <text>
+                        <textPath href="#circulo" textLength="760" lengthAdjust="spacing">SEQUÊNCIAS <tspan>•</tspan> PRATOS À LA CARTE <tspan>•</tspan> TEMAKIS NA HORA <tspan>•</tspan></textPath>
+                    </text>
+                </svg>
+                <img src="img/icone-akira.png" alt="" />
+            </a>
+        </section>
+
+        <!-- 4. Destaques (ul) -->
+        <section class="secao">
+            <div class="container">
+                <h2>para começar.</h2>
+                <ul class="destaques">
+                    <li>
+                        <a href="cardapio.html#temakis">
+                            <img src="img/temaki.jpg" alt="Temaki de salmão" />
+                            <h3>Temakis</h3>
+                            <p>O cone de alga crocante, enrolado na hora.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cardapio.html#rolls">
+                            <img src="img/rolls.jpg" alt="Uramakis cobertos com ovas" />
+                            <h3>Rolls</h3>
+                            <p>Uramakis e hot rolls, com ovas e molho tarê.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cardapio.html#sushis">
+                            <img src="img/nigiri.jpg" alt="Nigiris de salmão" />
+                            <h3>Nigiris e sashimis</h3>
+                            <p>Salmão fatiado na bancada, sobre arroz ou puro.</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <hr />
+
+        <!-- 5. Três ideias (os kanjis são os mesmos do logo: 食 = comer) -->
+        <section class="secao fundo-suave">
+            <div class="container">
+                <h2>a casa em três ideias.</h2>
+                <div class="ideias">
+                    <div>
+                        <span class="kanji" lang="ja">鮮</span>
+                        <h3>Fresco</h3>
+                        <p>Ingredientes escolhidos no dia, sem estoque parado.</p>
+                    </div>
+                    <div>
+                        <span class="kanji" lang="ja">手</span>
+                        <h3>Feito à mão</h3>
+                        <p>Cada temaki é enrolado depois que o pedido chega.</p>
+                    </div>
+                    <div>
+                        <span class="kanji" lang="ja">夜</span>
+                        <h3>Noite</h3>
+                        <p>Aberto quando bate a vontade de sushi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr />
+
+        <!-- 6. Como pedir (ol) e dúvidas (details). TEXTOS DE EXEMPLO: ajustar para a realidade da loja -->
+        <section class="secao">
+            <div class="container grade-2" style="align-items:start">
+                <div>
+                    <h2>como pedir.</h2>
+                    <ol class="passos">
+                        <li>Escolha seus itens no cardápio.</li>
+                        <li>Revise o pedido e envie pelo WhatsApp.</li>
+                        <li>Confirme o valor e a forma de pagamento.</li>
+                        <li>Retire no balcão ou receba em casa.</li>
+                    </ol>
+                </div>
+                <div>
+                    <h2>dúvidas.</h2>
+                    <details>
+                        <summary>Qual o horário de funcionamento?</summary>
+                        <p>Terça a domingo, das 18h às 23h.</p>
+                    </details>
+                    <details>
+                        <summary>Vocês entregam?</summary>
+                        <p>Sim, pelo WhatsApp. Confirmamos a taxa e o prazo de acordo com o endereço.</p>
+                    </details>
+                    <details>
+                        <summary>Posso encomendar para festas?</summary>
+                        <p>Pode. Chame no WhatsApp com a data e o número de pessoas.</p>
+                    </details>
+                    <details>
+                        <summary>Tem opção sem peixe cru?</summary>
+                        <p>Tem: hot rolls, pratos quentes e temakis vegetarianos. Veja no cardápio.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <hr />
+
+        <!-- 7. Visite: lista de definição (dl) + mapa (iframe). TROCAR pelos dados reais -->
+        <section class="secao" id="visite">
+            <div class="container grade-2">
+                <div>
+                    <h2>venha comer com a gente.</h2>
+                    <dl class="dados">
+                        <dt>Endereço</dt>
+                        <dd>Rua Exemplo, 000 - Centro<br />Carlos Barbosa - RS</dd>
+
+                        <dt>Funcionamento</dt>
+                        <dd>Terça a domingo, das 18h às 23h</dd>
+
+                        <dt>Pedidos e reservas</dt>
+                        <dd>WhatsApp: (00) 00000-0000</dd>
+                        <dd>Instagram: @akirarolls</dd>
+                    </dl>
+                    <p class="acoes">
+                        <a class="botao" href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20do%20site%20da%20Akira%20Rolls." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+                    </p>
+                </div>
+                <!-- iframe: coloca outra página dentro da nossa. Aqui, o Google Maps. -->
+                <iframe class="mapa" title="Mapa com a localização da Akira Rolls" loading="lazy"
+                    src="https://www.google.com/maps?q=Carlos+Barbosa,+RS&output=embed"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape-interno">
+            <img src="img/logo-akira.png" alt="Akira Rolls" />
+            <p>&copy; 2026 Akira Rolls. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body><!-- Fim do corpo do sistema-->
+
+</html><!-- Fim do bloco html-->

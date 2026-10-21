@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Cardápio - Akira Rolls</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/cardapio.js" defer></script>
+</head>
+
+<body>
+
+    <header class="topo">
+        <div class="topo-interno">
+            <a href="index.html"><img src="img/icone-akira.png" alt="Akira Rolls - página inicial" /></a>
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li class="esconde-mobile"><a href="index.html#restaurante">Restaurante</a></li>
+                    <li><a href="cardapio.html" aria-current="page">Cardápio</a></li>
+                    <li><a href="index.html#visite">Visite</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container titulo-pagina">
+            <h1>cardápio.</h1>
+            <p class="suave">Tudo é feito depois do pedido. Adicione os itens e envie pelo WhatsApp.</p>
+        </div>
+
+        <!-- Abas de categorias e busca (preenchidas pelo js/cardapio.js) -->
+        <div class="abas">
+            <div class="abas-interno">
+                <nav aria-label="Categorias"><ul id="abas"></ul></nav>
+                <input class="busca" id="busca" type="search" placeholder="Buscar no cardápio" aria-label="Buscar no cardápio" />
+            </div>
+        </div>
+
+        <div class="container" id="lista"></div>
+        <p class="container vazio" id="vazio" hidden>Nenhum item encontrado. Tente outra palavra.</p>
+    </main>
+
+    <!-- Barra fixa que aparece quando há itens no pedido -->
+    <div class="barra-pedido" id="barra" hidden>
+        <button type="button" id="abrir"><span id="resumo-barra"></span><span>Ver pedido</span></button>
+    </div>
+
+    <!-- dialog: janela modal nativa do HTML -->
+    <dialog id="painel" aria-labelledby="titulo-pedido">
+        <h2 id="titulo-pedido">seu pedido.</h2>
+        <ul id="resumo"></ul>
+        <p class="total"><span>Total</span><span id="total"></span></p>
+        <label>Seu nome <input id="nome" type="text" autocomplete="name" /></label>
+        <label>Endereço ou "retirada no balcão" <input id="endereco" type="text" autocomplete="street-address" /></label>
+        <label>Observações <textarea id="obs" rows="2"></textarea></label>
+        <div class="dialog-acoes">
+            <a class="botao" id="enviar" href="#" target="_blank" rel="noopener">Enviar pelo WhatsApp</a>
+            <button class="botao botao-claro" type="button" id="fechar">Voltar ao cardápio</button>
+        </div>
+    </dialog>
+
+    <footer class="rodape">
+        <div class="container rodape-interno">
+            <img src="img/logo-akira.png" alt="Akira Rolls" />
+            <p>&copy; 2026 Akira Rolls. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
